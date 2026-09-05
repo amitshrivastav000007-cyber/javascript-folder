@@ -1,0 +1,669 @@
+//var(functional scoped matlab ye pure function me vary karta h )
+//  let(ye apne parent braces me vary karta h)
+//  const(ye throuhout the program constant rehta h)
+//declartion and initialization
+// let a = 10;
+// let a = 20;
+// const dulha ="ravi";
+// const dulhan ="suntia"
+
+
+// function abcd() {
+//     if (true) {
+//         var a = 10;
+//     }
+// }
+
+//tdz-utna area jisme js ko pata to h ki variable exist karta h but wo apko value nhi de skta
+//temporal dead zone
+// console.log(a);
+
+
+
+
+
+
+// var a = 12;
+
+
+//hoisting -> ek variable ko jab js me bnate h to wo do hisso me toot jata h 
+            //aur uska declare part uper chala jata h aur intial part niche reh jata h
+
+
+
+            //data types in js
+//(1) primitive data types -> aisi sari value jisko copy kane pe tumhe ek real copy mil jaye
+//string, number,boolean,undefined,null,symbol(bigint)
+//(2) reference data types -> aisi sari value jisko copy karne pe tumhe ek reference milta h
+//object, array, function
+//[],{},()
+
+
+// symbol-> future me ham koi labraries ka use karenge 
+// ab is case me iski kuch fiels hoti h jiske similar ham bhi bana dete h 
+// aur galti se haari banai hui field us library ki original field ko change kar deta h 
+
+
+//dynamic typing -> js me static typing nhi hai but dynamic typing h jiski wajha se aap data change kar skteh h 
+//(mtlab aap a ki value badal skte h)
+// ex-  typeof 10 //number  (typeof likh ke aap kisi bhi value ka type check kar skti h)
+//(isme bahut sare quirks bhi h)
+
+
+//type coercion(== vs ===) -> js me type coercion hota h jiski wajha se aapko kabhi kabhi galat result milta h
+
+
+
+//truthy and falsy values -> js me kuch aisi value h jo true ya false ke roop me convert ho jati h
+// ex- 0, "", null, undefined, NaN, false,document.all -> falsy values
+// insabke alawa sari value truthy h(check karne ke liye aapko !!value ka use karna hoga)
+
+
+//                        operators
+// types -> arithemetic,comparison logical,assignment,unary,tenary
+// #arithmetic operators -> +, -, *, /, %, **(exponentiation operator)
+// #comparison operators -> ==, ===, <= ,>=,  <, >, !=, !==
+// ye sirf check karta h ki dono taraf value equal h ya nhi.
+// 
+
+//assignment operators -> =, +=, -=, *=, /=, %=
+// ex- let a =15;
+// a+=5;(jo bhi  a ki value h usme 5 add)
+// a-=1;
+// a*=2;
+// a%=3;
+// a/=4;
+
+
+//logical operators -> &&, ||, !
+// && (AND) -> dono condition true honi chahiye
+// || (OR) -> koi bhi ek condition true ho to final ans true hoga
+// ! (NOT) -> boolean value ko ulta karta h
+
+
+//unary operators -> +, -, typeof, !, ++, --
+// kisi bhi string value ke aage + lagane se wo number me convert ho jata h
+// typeof se type pata chlta h
+// ! se boolean value(true and false) ko ulta kar deta h
+// a me ++ aage(praddition) lagane se a ki value 1 badh kar print hoti h
+// a me ++ piche(post addition) lagane se a ki value us time to same print hoti h but jab bhi nxt time a aata h to usme 1 badh jaata h
+// uper ki 2no lines ke opposite -- kaam karta h
+
+
+// tenary operator -> condition ? true : false
+// ex- 12>13 ? console.log("true") : console.log("false");
+// code false wale ke sath run karega
+
+
+
+// typeof ->refering premitives values
+// instanceof -> refering reference value
+
+
+
+
+
+//CONTROL FLOW//
+// -> if . eles . else-if
+// -> switch case(isme code likhne ke baad nxt line me break; likhna jaroori hota h)
+// -> early return pattern
+
+
+//rock paper scissor(pending)
+
+
+
+
+//                                         LOOPS
+//repeat karne ko loop kehte h
+// 1 1 1 1 1 1 1 1 1 1
+// 1 2 3 4 5 6 7 8 9 0
+
+//for => kaha se jana h -> kaha tak jana h -> kaise jana h 
+//for(start; end; change)
+
+
+//while=> kaha se jana h -> kab rukna h -> kasie jana h 
+// start
+// while(end){
+//     code
+//       change
+// }
+
+// do-while => isme do ek baar jaroor chalega chahe while ki condition galat hi q na ho
+
+// let i = 2
+// do{
+//     console.log(i);
+//     i++;
+// }
+// while(i<24){
+//     console.log(i)
+//     i++;
+// }
+
+
+//break->loop me code ko wahi rok dena 
+//continue-> loop me se ek perticular code ko gayab kardena
+
+
+
+// abhi looops me bahut sare topics h in future me isme add karta rahunga
+
+
+
+
+
+
+
+
+
+//                       FUNCTIONS
+
+
+
+// function ko ham in tareekose likh skte h
+
+//  1-  function statments
+//  function abcd(){
+
+// }
+
+// 2- function expression
+//  let fnc = function(){
+
+// }
+
+//3- fat arrow function
+//  let abcd =()=>{
+
+//    }
+
+
+
+// . arguments and parameters
+// function add(v1, v2){
+//     console.log(v1 + v2)
+// }
+// add(1,2); 
+
+-> yaha pe jo (v1, v2) h wo parameters h
+-> is function run me jo real value (1,2) put kiya h wo argument h
+
+
+
+
+// default, rest and spread parameters
+
+//default:- jab argument me real value kuch bhi na ho to ham parameter me (v1 = 0, v2 = 0)
+// aisa kuch value de dete h.
+
+
+// rest(...) parameters:- jab ARGUMENTS BAHUT SARE HO TO HAME PARAMETERS BAHUT SARE BANANE PADENGE, ISSE
+//  BACHNE KE LIYE HAM, REST KA USE KARTE H, agar ... function ke parameter space me lage to wo rest operator h 
+// aur agar wo arrays and objectme lage to wo spread oprator hota h 
+
+
+// returns and early returns
+
+//return:- return ka mtlb hota h jaha se aaye ho wahi daal denge.
+// early return function:- 
+
+
+// -->first class function:- functions ko value ki tarha use kar skte H.
+function abcd(val){
+ val();
+}
+abcd(function(){
+        console.log("chale ja bsdk")
+});
+
+
+//--> high order function:- hof wo hote h jo ya to function return kare ya fir accept kare apne para meter me
+function abcd(){
+return function(){
+ console.log();
+}
+}
+abcd()();                           (  yaha pe double ()() -> 1st () function ko chalane ke liye aur dusra return me jo value aai h usko chalane ke liye q ki return value bhi ek function h)
+
+
+
+
+// pure vs impure fncs
+pure function:- aise function jo bahar ki value ko na badle wo pure function h.
+ex:-   
+//let a = 12
+//function abcd(){
+//   consoel.log("balle balle ");
+//}
+//abcd(;)
+
+//impure function:- aise function jo bahar ki value ko badal de wo asabhi impure function h.
+let a = 12;
+function hui(){
+a++;
+}
+
+
+
+
+
+closures --> ek function jo return kare aur aur function aur return kiya hua function hamesha parent fnc ka ek variable use karega  
+ex:- function abcd(){
+    let a = 10
+    return function(){
+        consol.log(a);
+    }
+}
+
+// lexical scoping:- lexical scoping ka matlab hota h ki pure function uske value ko access karna.
+jaisa ki niche example me diya hua h a ki value pure function abcd  me access ki ja skti h aur wahi b ki only defg fnc me and c ki kewal ghij fnc me 
+function abcd(){
+    let a = 10;
+    function defg(){
+        let b = 20;
+        function ghij(){
+            c = 30
+        }
+    }
+}
+
+
+
+// iife( immedietly invoked function expression) :- is fnc me koi bhi code likhe ge to wo turant chl jayga q ki ye already called h.isko ()cover karna imp H
+(function(){
+
+})();
+
+// hoisting deference btw declaration and expression
+
+isme function statement ke form me  function difine karne se pehle call karke jab fnc define kar denge to bhi fnc chal jayega pr dusre form me nhi chalega and na onather lang me
+
+
+
+abcd();
+
+
+
+
+function abcd(){
+    console.log("heyheyey");
+
+}
+
+
+
+
+//                                                      ARRAYS
+(array hamesha 0th position se chalu hota h) (mtlb agar hame koi kahe ki hame 3rd position pe 12 likha h to iska matlb ham 4 no. pe 12 rakhenge )
+
+->creat array(2 ways to create array)
+let arr = [],  let arr = Array();
+
+//modification of array 
+let arr = [1, 2, 3, 4]
+arr[2] = 12;      (iska mtlb arr ke 2th index ki jagha 12 rakh do)
+
+// push
+let arr = [1 ,2, 3, 4, 5]
+arr.push(7000);   (ans me ye value arr me add ho jaygi mtlb ab arry kuch aisa dikhega [1 ,2, 3, 4, 5, 7000])
+
+//pop
+let arr = [1 ,2, 3, 4, 5]
+arr.pop();     (pop se last ki ek value gayab ho jaygi)
+
+//shift
+let arr =[1 ,2, 3, 4, 5]
+arr.shift();    ( shift starting se value hata deta H)
+
+// unshift 
+let arr =[1 ,2, 3, 4, 5]
+arr.unshift(0); 
+ (unshift stating me jo value aap doge wo aad kardeta h,
+ ab array kuch aaisa dikhega [0, 1 ,2, 3, 4, 5] )
+
+ //splice
+ let arr =[1 ,2, 3, 4, 5]
+ arr.splice(2, 1);     (splice beech me se value hata deta ,yaha pe 2 indicate kar raha h kis index position se value hatani h
+ aur 1 indicate kar RAHA H kitni value hatani h)
+
+ // slice
+ let arr =[1 ,2, 3, 4, 5]
+ let newarr = arr.slice(0, 4)  (slice ka kaam hota h ki wo main array ko change nhi karta h balki wo new aary return karta h (0, 4)ka matlb h ki oth position se lekar 4th index positin tak ki value ka new arry retun karega)
+
+ //reverse
+ (ye array ko reverse kar deta h)
+
+ 
+ // sort
+ let arr =[11 ,32, 3, 22, 45]
+ let amit = arr.sort(function (a, b) {
+    return a-b;
+ })                                          (sort ek fuction accept karta h ,mtlb ye iska syntax h )
+(sort array ko ascending order me change kar deta h jab return a-b hoga aur descending order me change kar dega jab b-a return hoga)
+
+
+//forEach , map , reduce , sort ye sab function accept karte H
+
+
+
+//forEach
+
+let arr =[11 ,22, 33,34, 5]
+
+arr.forEach(function (val) {
+   console.log( val +5) 
+})                      ( yaha pe ye code array ki har ek value ke liye ek baar chalta H)
+
+
+
+//map
+
+(map tab use krna h jab aapko ek naya array banan ho pichle array ke data ke basis pr
+aur new array me purane array ki jitne same element hote H)
+
+(map dikhte hi man me ek blannk array bana lena h)
+let arr =[11 ,22, 33,34, 5]
+arr.map(function(val){
+    return 12;
+}) 
+(jab aapko koi aisa case dikh jaye jaha pr ek array se naya array banega and wo array kuch values ko rakhega tab map lagega)
+
+
+
+
+//filter
+filter same kaam karta h map ki tarha but ye new array me sirf kuch ki value ko bejhta h 
+
+let arr =[11 ,22, 33,34, 5]
+let newarr = arr.filter(function (val){
+    if (val>5) return true;
+})            (yaha pe return me true karoge to value new array me jaygi aur false karoge to value new array me nhi jaygi)
+
+
+//reduce
+reduce araay ko reduce karke single value me convert kar deta h.
+
+let arr =[11 ,22, 33,34, 5]
+let ans = arr.reduce(function (accumultor, val){
+    return accumultor + val;
+}, 0);            (yaha pe accumulator ek variable h jiski value last me 0 difine ki gai h)
+
+
+//find
+
+let arr = [
+    { id: 1, key: 1}
+    { id: 2, key: 2}
+    { id: 3, key: 1}
+
+];
+
+let va = arr.find(function(val){
+    return val.key === 1;
+})          (find basically ye karta h ki array me se tumhare return kiye gaye value ke hisaab se element finde kark deta h)
+
+
+//some
+let arr = [10,23,40,89,90]
+let any = arr.some(function (val){
+    return val > 85;
+});
+  ( basically some jo h wo console me batata h ki jo tumne return ki condition rakhi h wo (true h ya false))koi baccha padhne wala h ya nhi
+
+  
+  
+  
+  //every
+  let arr = [10,23,40,89,90]
+  let amit = arr.every(function(val){
+    return val > 10;
+  });
+(ye some ka opposite hota h aur hame ye batat h ki hamari return ki hui condition ko follow karta h ya nhi)
+
+
+
+
+//desturcturing
+let arr = [1, 2, 3, 4, 5]
+let [a, b, , c] = arr;    (generally destructuing me ye hota h ki jo value hame array me nhi chaiye hoti use ham nikal dete h kuch is tareeke se)
+
+
+//spread operator(...arr)
+add "india" to start of this array using spread: 
+// let countries = ["usa" , "uk"]
+// countries = ["india" , ...countries];
+
+
+
+
+//                                  OBJECTS
+
+//STRUCTURE 
+
+obj = {
+    name: "Amit"
+}
+
+obj.name     , obj["name"]                -> whit the help of these 2 ways we can get access to got inside the object
+
+
+
+// const user = {
+    name: "harsh",
+    address: {
+        city: "bhopal",
+        pin: 462001,
+        location: {
+            lat: 23.2,
+            lng: 77.4,
+        }
+    }
+}
+obj.user.address.location.lang                          (aise baar baar dot me na likhna pade isliye ham destuturing karte h
+
+
+                                                        kuch asie  
+    let {lat,lang} = user.address.location              jis part ko access karna hota h usko ham variable form me bahar nikal lete H)
+
+
+
+
+
+is uper wale object me 1 ke ander 1 ke ander 1 .. object h isi ko nesting kehte h 
+
+
+
+
+//looping
+
+// forin loop
+example:-
+let obj = {
+    Name: "amit",
+    age: 18,
+    email: "amitshrivastav00007@gmail.com",
+
+};
+
+
+for(let key in obj){
+    console.log(key, obj[key]);
+}
+
+
+// object.keys
+
+object.keys(obj) bject ke sare values ko ek array me daal deta h check kar skte h console me
+
+
+//object.entries
+ye ek general array banata h array 1 array 2 karke fir usme har ek array me array banata hobjet ke elements  ka
+
+
+
+
+//coping object
+
+1-  spread(...obj) -generally object ko copy karne ka sabse accha way(but not nested(obj ke ander obj) object)
+
+
+
+2- object.assign-   object.assign({ price: infinity},obj);     (ye ab jayda use nhi hota h isme jo {}ke ander likha h marji h )
+
+
+
+
+
+3- deep clone(JSON.parse(JSON.stringify(obj));)- jab nested obj aa jata h to usko copy karne se nested part ka reference milta h na ki real copy milti h 
+tp is prob ko solve karne ke liye ham deep clone ka us karte h.
+
+JSON.parse(JSON.stringify(obj)); = iska use karne se stringify se obj string me covert hoga fir waps se obj me covert ho jayega jisse hame real copy milegi.
+
+
+
+
+// optional chaining
+jab ham obj ke ander kuch bhi access karte h to dot se pehle har baar ? laga dete h jisse ye hota h ki console me hame error nhi milta h uski jagha hame undefined milta h
+
+
+// computed properties
+iske use se ham apne obj me kuch add kar skte H
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////                                           documnets object model(dom)
+
+html me ksis bhi type ka changes dom kehlata h
+
+
+topic:-
+selecting elements:- 
+getElementById          :  html me id ke throough element js me  select karna
+getElementsByClassName  :  elements ko class deker select karna      (ye bhi same querySelectorAll ki tarha array dega)
+querySelector           :  querySelector()             ->iske braces me jo tag apne select karna h wo likhna
+querySelectorAll        :  querySelectorAll()          ye bhi same hi h bs ye console me array jaisa STRUCTURE dega 
+
+
+insbko variable maan lena h 
+format :- 
+let val  = document.querySelector();
+kabhi kabhi console.log karne pe direct tag aajyga to console.dir karna 
+note point:- ab ke time pe sabhi companies me ye hi  querySelector  , querySelectorAll us hota h
+
+
+//text/content access:- innerText, textContent, innerHTML
+insbka usecase h js me code karke html ko manupulate karna mtlb usme chnage karna 
+example:- 
+              let h1 = document.querySelector("h1")
+              console.dir(h1)
+              h1.innerHTML =  "<i>bhaiya vastegane huiye</>"
+
+
+
+
+// Attribute manupulation:-getArrtribute, setAttribute, removeAttribute
+     
+     getArrtribute:- jo Attributediya hua h usko manga like that 
+     // let a = document.querySelector("a");
+    // console.log(a.getAttribute("href"));
+
+
+
+setAttribute:- isse ham kisi image ka reference link copy ksrke usko Attribute me set kar skte h
+,(href tag blank rako ""ke sath);
+ let a = document.querySelector("a");
+a.setAttribute("href", "http://www.google.com")
+
+
+removeAttribute:- by default a tag ke paas apna href tha but wo is attribute ke use se remove ho gaya h 
+ // let a = document.querySelector("a");
+    // console.log(a.removeAttribute("href"));
+
+
+
+
+
+//dynamic dom manupulation
+createElement:- isse ham js me html ka element create kar skte h ,
+ .append:- iske use hamara create kiya hua textContent body me niche laga deta h,
+  .prepend:- isse uper laga deta h ,
+   remove():- remove ka use karne se use elementya textContent remove ho jata h 
+
+
+
+   
+   
+// js me css
+normally ha id, class use karke css add karskte h baki ek baar aur dekh lio amit tu bhool raha h
+
+
+
+
+
+//textContent:- isse text change karne skte h
+//innerText :- isse bhi 
+// innerHTML:- isse bhi but ye tags ko covert krke print karta h aur uper wale dono tags ko bhi print kardete h agar tags ki baat ati h to.
+
+
+
+//classList.add() = class add karta H
+//classList.toggle():- agar class lagi hogi to remove kar dega ,aur vice verse
+
+
+
+
+
+// events and eventlistner
+
+select the paragraph like that -> let p = document.querySelector("p);
+then realsise karo kya reation dena h paragraph ko like that  p.addEventList("click", function(){
+    p.style.color = "green":
+});
+
+type of events:-
+click
+input
+change event:- // change event tab chalta h jab aapka koi input select ya textarea me koi change ho jaye
+submit
+mouseover,mouseout,mousemove
+keyup
+
+-> event object:- target, type, prventDefault.
+event bubbling:- jispe evebt aayega uspar listner nhi hua to hamara event uske parent par listner dhundhega aur aisa karte karte uper ki taraf move karega 
+event capturing :- isko },true);   asie on karte H
+
+
+
+
+NOTE POINT :- jab bhi aap click karte ho y KOI BHI event raise karte ho 
+to aapka jo event flow do phases me chalta hai:
+
+phase 1: event top level element se  neeche ki taraf aayega 
+phase 2: event raised element se parent ki taraf jaayega 
+
+aur pehle 1 hoti h
+
+*****hamesha phase 1 hi chalta h but wo by default off rehta h lekin jab ham ise on kar dete h aur fir bhale hi ham 2 phase wala mamla chalate h tab bhi pehle phase 1 hi chalega 
